@@ -1,61 +1,7 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend {
+html,body,div,span,applet, object,iframe,table,caption,tbody,tfoot,thead,tr,th,td,del,dfn,
+em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,h1,h2,h3,h4,h5,h6,p,blockquote,
+pre,a,abbr,acronym,address,big,cite,code,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend {
   vertical-align: baseline;
   font-family: inherit;
   font-weight: inherit;
@@ -101,7 +47,7 @@ h1 {
 
 nav a {
   padding: 1%;
-  border-radius: 20%;
+  border-radius: 10px;
   margin: 1%;
   background-color: #f9af72;
   color: #d6e9f8;
@@ -120,22 +66,28 @@ nav a:hover {
   background-color: #fef7db;
   display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .mainimg {
   width: 100%;
   margin: 1.5%;
 }
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   padding: 10% 0 9% 0;
 
 }
 .text {
-  align-content: space-around;
-  justify-content: space-around;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
   text-align: center;
   color: #3F3E66ff;
-  margin-bottom: 5%;
+  margin: auto;
+
 }
 #main p {
   font-size: 2rem;
@@ -144,19 +96,22 @@ h2 {
 }
 #main a {
   padding: 2% 3%;
-  border-radius: 20%;
-  margin-top: 80%;
+  border-radius: 6px;
+  margin: auto;
   background-color: #f9af72;
   color: #D6E9F8;
   font-weight: bold;
   text-decoration: none;
   transition: 1s;
+  letter-spacing: 2px;
+  text-shadow: #8bc5eb 12px;
 }
 
 #main a:hover {
-  background-color: #8bc5eb;
-  color: #ffcc00;
-  border: #f9af72 2px solid;
+  background-color: #D6E9F8;
+  color: #f9af72;
+  border: #f9af72 4px solid;
+  
 }
 
 /* picture section */
@@ -171,8 +126,13 @@ h2 {
 }
 
 #favorite div {
+  width: 20%;
   margin: 2%;
 }
+#favorite img{
+  width: 100%;
+}
+
 
 footer {
   background-color: #8bc5eb;
@@ -190,7 +150,7 @@ h3 {
 footer a {
   margin: 3%;
   padding: 1.5% 2%;
-  border-radius: 20%;
+  border-radius: 10px;
   margin: 3% 10%;
   background-color: #f9af72;
   color: #d6e9f8;
@@ -201,4 +161,92 @@ footer a:hover {
   background-color: #fef7db;
   color: #8bc5eb;
   border: #f9af72 2px solid;
+}
+@media(max-width:800px) {
+ h1{
+  font-size: 4.7rem;
+  }
+ h2{
+   font-size:2rem;
+ }
+ #main p{
+   font-size: 1.2rem;
+ }
+ #main a{
+   padding: 3%;
+ }
+ #favorite{
+   padding: 6% 0;                                       ;
+ }
+#favorite div{
+  padding: 2.1% 0;
+}
+}
+
+@media(max-width:500px) {
+  
+  /* Header Styles */
+ h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 4% 0 0 0;
+  } 
+
+  header {
+    background-color: #8bc5eb;
+    color: #f9af72;
+    padding: 0 0 2% 0;
+    width: 100%;
+    font-size: .8rem;
+  }
+
+  header nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a{
+    width: 36%;
+    text-align: center;
+    padding: 4% 3%;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  #main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainimg{
+    width: 90%;
+  }
+
+  h2{
+    font-size: 2.5rem;
+  }
+  #main a{
+    padding: 4%;
+    margin-bottom: 4%;
+  }
+  
+  #favorite div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40%;
+  }
+  footer{
+    padding: 8% 0; 
+  }
+  h3{
+    margin: 5%;
+    font-size: 2rem;
+  }
+  #contact a{
+    padding: 4% 3%;
+  }
 }
